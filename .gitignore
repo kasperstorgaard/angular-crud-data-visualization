@@ -73,3 +73,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+/bower_components
+/node_components

@@ -1,14 +1,14 @@
 //dependencies
-require('./posts-controller');
+require('./form-controller');
 
 //template
-require('./posts.tpl.html');
+require('./form.tpl.html');
 
 module.exports = function postsDirective () {
   return {
     restrict: 'A',
-    controller: 'postsController',
-    templateUrl: "posts.tpl.html",
+    controller: 'formController',
+    templateUrl: "form.tpl.html",
     replace: true
   };
 };

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "watch": "node dev-hot-server.js"
+    "watch": "node dev-hot-server.js",
+    "websocket": "node websocket-server.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
   },
   "homepage": "https://github.com/kasperstorgaard/angular-crud-data-visualization",
   "dependencies": {
-    "d3": "^3.5.5"
+    "d3": "^3.5.5",
+    "lodash": "^3.2.0"
   },
   "devDependencies": {
     "bower": "^1.3.12",
@@ -39,6 +41,7 @@
     "style-loader": "^0.8.3",
     "url-loader": "^0.5.5",
     "webpack": "^1.5.3",
-    "webpack-dev-server": "^1.7.0"
+    "webpack-dev-server": "^1.7.0",
+    "ws": "^0.7.1"
   }
 }

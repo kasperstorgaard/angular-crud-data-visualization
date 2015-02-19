@@ -1,0 +1,35 @@
+{
+  "name": "angular-crud-data-visualization",
+  "version": "0.1.0",
+  "homepage": "https://github.com/kasperstorgaard/angular-crud-data-visualization",
+  "authors": [
+    "kasperstorgaard <kst@codehouse.com>"
+  ],
+  "description": "an angular app for crud and data visualization",
+  "main": "index.js",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular",
+    "webpack",
+    "websocket",
+    "crud",
+    "data",
+    "visualization"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.12.0",
+    "angular-websocket": "~1.0.8",
+    "angular": "~1.3.13",
+    "bootstrap": "~3.3.2"
+  }
+}
