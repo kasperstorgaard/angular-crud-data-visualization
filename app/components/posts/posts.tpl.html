@@ -1,6 +1,6 @@
 <div class="posts">
   <ul class="media-list">
-    <li class="media post" ng-repeat="post in posts">
+    <li class="media post" ng-repeat="post in posts" ng-class="{edit: post.isEditing}">
       <ul class="list-group">
         <li>
           <div class="panel panel-default">
@@ -18,8 +18,11 @@
               <h3 class="media-heading">{{post.content.message}}</h3>
             </div>
             <div class="panel-body">
-            <button class="btn btn-block btn-default" ng-click="isCollapsed = !isCollapsed">More info</button>
-
+            <div class="btn-group btn-group-justified">
+              <a class="btn btn-info"
+              ng-click="isCollapsed = !isCollapsed">More info</a>
+            <a class="btn btn-warning" ng-click="editPost(post)">Edit</a>
+            </div>
             <div collapse="!isCollapsed" class="table">
             <hr />
               <table>
@@ -29,39 +32,27 @@
                   </tr>
                   <tr>
                     <td>tags</td>
-                    <td ng-if="post.tags.length">
-                      <span ng-repeat="tag in post.tags">{{tag}}</span>
-                    </td>
+                    <td>{{post.tags}}</td>
                   </tr>
                   <tr>
                     <td>channels</td>
-                    <td ng-if="post.channels.length">
-                      <span ng-repeat="channel in post.channels">{{channel.name}}</span>
-                    </td>
+                    <td>{{post.channels}}</td>
                   </tr>
                   <tr>
                     <td>countries</td>
-                    <td ng-if="post.geo.countries.length">
-                      <span ng-repeat="country in post.geo.countries">{{country.value}}</span>
-                    </td>
+                    <td>{{post.geo.countries}}</td>
                   </tr>
                   <tr>
                     <td>languages</td>
-                    <td ng-if="post.geo.languages.length">
-                      <span ng-repeat="language in post.geo.languages">{{language.value}}</span>
-                    </td>
+                    <td>{{post.geo.languages}}</td>
                   </tr>
                   <tr>
                     <td>cities</td>
-                    <td ng-if="post.geo.citites.length">
-                      <span ng-repeat="city in post.geo.citites">{{city.value}}</span>
-                    </td>
+                    <td>{{post.geo.cities}}</td>
                   </tr>
                   <tr>
                     <td>regions</td>
-                    <td ng-if="post.geo.regions.length">
-                      <span ng-repeat="region in post.geo.regions">{{region.value}}</span>
-                    </td>
+                    <td>{{post.geo.regions}}</td>
                   </tr>
                 </tbody>
               </table>

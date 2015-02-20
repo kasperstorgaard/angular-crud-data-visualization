@@ -1,5 +1,5 @@
 <div class="form">
-  <h2>{{formMode}} post</h2>
+  <h2>{{headerText}}</h2>
   <form>
   <div class="form-group">
     <label for="network">network</label>
@@ -60,6 +60,6 @@
     <input type="text" class="form-control" id="regions"
     placeholder="regions" ng-model="post.geo.regions">
   </div>
-  <button class="btn btn-default">Submit</button>
+  <button class="btn btn-default" ng-click="submitAction()">{{saveText}}</button>
 </form>
 </div>

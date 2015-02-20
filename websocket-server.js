@@ -9,9 +9,12 @@ console.log('websocket listening on: localhost:8080');
 
 wss.on('connection', function(ws) {
   ws.on('message', function(req) {
-    var action = req.action;
-
-      switch (action){
+    try {
+      req = JSON.parse(req);
+    }catch(e){
+      return;
+    }
+      switch (req.action){
         case 'createOne':
           createOne(ws, req);
           return;
@@ -26,17 +29,20 @@ wss.on('connection', function(ws) {
           return;
         case 'deleteOne':
           deleteOne(ws, req);
+          return;
         case 'deleteAll':
           deleteAll(ws, req);
+          return;
         default:
           readAll(ws, req);
+          return;
       }
   });
 });
 
 //------------------------------- CRUD -------------------------------//
 function createOne(ws, req){
-  fakeDb.push(req.data);
+  fakeDb.unshift(req.data);
 
   ws.send(JSON.stringify({item: req.data, action: 'createOne'}));
 }
@@ -56,7 +62,7 @@ function updateOne(ws, req){
   ws.send(JSON.stringify({item: post, action: 'updateOne'}));
 }
 
-function updateAll(ws, req){
+function updateAll(ws, data){
   fakeDb = _.map(fakeDb, function(post){
     return _.assign(post, req.data);
   });
