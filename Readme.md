@@ -14,3 +14,5 @@ Build:
 Local production server (needs build first):
 - run "node app.js"
 
+server for both Dev and Build is localhost:3000
+
