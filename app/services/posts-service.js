@@ -66,7 +66,9 @@ function handleResponse(collection, data){
 
 function toDbFormat(post){
   post.scheduled = post.scheduled.toISOString();
-  post.tags = _.map(post.tags.split(','), function(tag){ return tag.trim();});
+  post.tags = !post.tags.trim()
+                ? []
+                : _.map(post.tags.split(','), function(tag){ return tag.trim();});
 
   post.channels = _.map(post.channels.split(','), function(channel){
     return {"name":channel,"id":getNewId()};
@@ -120,7 +122,7 @@ function getEmptyPost(){
     tags: '',
     status: '',
     channels: '',
-    scheduled: '',
+    scheduled: new Date(),
     geo: {
       countries: '',
       languages: '',

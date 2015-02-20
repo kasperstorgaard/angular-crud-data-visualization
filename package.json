@@ -6,6 +6,7 @@
   "scripts": {
     "test": "test",
     "watch": "node dev-hot-server.js",
+    "build": "webpack ./app/app.js bundle.js",
     "websocket": "node websocket-server.js"
   },
   "repository": {

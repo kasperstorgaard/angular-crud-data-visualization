@@ -10,3 +10,7 @@ Dev:
 
 Build:
 - run "npm run build"
+
+Local production server (needs build first):
+- run "node app.js"
+

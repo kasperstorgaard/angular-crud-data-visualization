@@ -52,14 +52,13 @@ function readAll(ws, req){
 }
 
 function updateOne(ws, req){
-  var post = _.find(fakeDb, {'id': req.data }),
-      updated = removedArr.length != 0;
+  var post = _.find(fakeDb, {'id': req.data.id });
 
-  if(post.length != 0){
+  if(post && post.length != 0){
     post = _.assign(post, req.data);
   }
 
-  ws.send(JSON.stringify({item: post, action: 'updateOne'}));
+  ws.send(JSON.stringify({item: post || [], action: 'updateOne'}));
 }
 
 function updateAll(ws, data){
