@@ -32,7 +32,7 @@ module.exports = function postsFactory($websocket) {
 function handleMessage(collection, data){
   switch (data.action){
     case 'createOne':
-      return collection.push(data.item); //expects a single item in items from "backend"
+      return collection.unshift(data.item);
 
     case 'updateOne':
       var index = _.indexOf(collection, {'id': data.item.id });

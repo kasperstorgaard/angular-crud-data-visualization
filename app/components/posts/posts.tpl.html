@@ -6,6 +6,8 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <h2>{{post.content.network}} - {{post.content.postType}}</h3>
+              <button class="delete-button btn btn-danger" ng-click="deletePost(post.id)">
+              delete</button>
             </div>
             <div class="panel-body">
               <img class="post-image" ng-src="{{post.content.media.url}}"

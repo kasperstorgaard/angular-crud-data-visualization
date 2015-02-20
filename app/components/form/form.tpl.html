@@ -1,1 +1,65 @@
-<div>form</div>
+<div class="form">
+  <h2>{{formMode}} post</h2>
+  <form>
+  <div class="form-group">
+    <label for="network">network</label>
+    <input type="text" class="form-control" id="network"
+    placeholder="network" ng-model="post.content.network">
+  </div>
+  <div class="form-group">
+    <label for="type">type</label>
+    <input type="text" class="form-control" id="type"
+    placeholder="type" ng-model="post.content.postType">
+  </div>
+  <div class="form-group">
+    <label for="type">image url</label>
+    <input type="text" class="form-control" id="image" ng-model="post.content.media.url">
+  </div>
+  <div class="form-group">
+    <label for="type">scheduled for</label>
+    <input type="date" class="form-control" id="scheduled"
+    placeholder="scheduled" ng-model="post.scheduled">
+  </div>
+  <div class="form-group">
+    <label for="type">message</label>
+    <input type="text" class="form-control" id="message"
+    placeholder="message" ng-model="post.content.message">
+  </div>
+  <div class="form-group">
+    <label for="type">status</label>
+    <input type="text" class="form-control" id="status"
+    placeholder="status" ng-model="post.status">
+  </div>
+  <div class="form-group">
+    <label for="type">tags</label>
+    <input type="text" class="form-control" id="tags"
+    placeholder="tags" ng-model="post.tags">
+  </div>
+  <div class="form-group">
+    <label for="type">channels</label>
+    <input type="text" class="form-control" id="channels"
+    placeholder="channels" ng-model="post.channels">
+  </div>
+  <div class="form-group">
+    <label for="type">countries</label>
+    <input type="text" class="form-control" id="countries"
+    placeholder="countries" ng-model="post.geo.countries">
+  </div>
+  <div class="form-group">
+    <label for="type">languages</label>
+    <input type="text" class="form-control" id="languages"
+    placeholder="languages" ng-model="post.geo.languages">
+  </div>
+  <div class="form-group">
+    <label for="type">cities</label>
+    <input type="text" class="form-control" id="cities"
+    placeholder="cities" ng-model="post.geo.cities">
+  </div>
+  <div class="form-group">
+    <label for="type">regions</label>
+    <input type="text" class="form-control" id="regions"
+    placeholder="regions" ng-model="post.geo.regions">
+  </div>
+  <button class="btn btn-default">Submit</button>
+</form>
+</div>
