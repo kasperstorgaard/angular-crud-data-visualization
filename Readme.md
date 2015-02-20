@@ -16,3 +16,7 @@ Local production server (needs build first):
 
 server for both Dev and Build is localhost:3000
 
+Troubleshooting: 
+If you get EACCES error for localhost:8080 (websocket port, happened on my Windows work computer), 
+then change the port to a free port in websocket-server.js and the two services which use it and rebuild.
+
