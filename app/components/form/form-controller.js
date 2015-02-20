@@ -2,7 +2,7 @@
 require('../../services/posts-service.js');
 
 //imports
-_ = require('lodash');
+var _ = require('lodash');
 
 //posts styles
 require('./form.less');

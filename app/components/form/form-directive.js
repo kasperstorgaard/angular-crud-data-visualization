@@ -4,7 +4,7 @@ require('./form-controller');
 //template
 require('./form.tpl.html');
 
-module.exports = function postsDirective () {
+module.exports = function formDirective () {
   return {
     restrict: 'A',
     controller: 'formController',

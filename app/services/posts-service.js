@@ -3,7 +3,7 @@ var WEBSOCKET_ENDPOINT = 'ws://localhost:8080';
 
 var _ = require('lodash');
 
-module.exports = function postsFactory($websocket) {
+module.exports = function postsService($websocket) {
   var dataStream = $websocket(WEBSOCKET_ENDPOINT);
 
   var collection = [];
