@@ -1,4 +1,5 @@
 #Angular CRUD data visualization
+Note: currently reworking this entire project in branch "rework", merging back to "master" some time next week
 
 Install:
 - (if on Windows): install Python 2.7.9
