@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col col-md-6">
+      <div class="posts">
+          <ul class="media-list">
+              <li ng-repeat="post in posts" post="post" data-edit="editPost(post)" data-delete="deletePost(post)"></li>
+          </ul>
+      </div>
+  </div>
+  <div class="col col-md-6">
+    <div post-editor="editorPost" data-submit="submitPost(editorPost)"></div>
+  </div>
+</div>
